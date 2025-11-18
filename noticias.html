@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias – SporyHigh</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+    <div class="header-inner">
+
+        <a href="index.html" class="logo" aria-label="Volver al inicio">
+            <span class="logo-main">SPORY</span><span class="logo-highlight">HIGH</span>
+        </a>
+        
+        <button class="nav-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="playlists.html">Playlists</a></li>
+                <li><a href="artistas.html">Artistas</a></li>
+                <li><a href="noticias.html" class="active">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+    <main class="page">
+        <!-- Header section -->
+        <header class="section-header">
+            <h2>Noticias</h2>
+            <p>Lo último del panorama musical.</p>
+        </header>
+
+        <!-- Grid noticvias -->
+        <section class="news-full-grid">
+
+            <article class="news-card-large">
+                <img src="img/bejo.webp" alt=" artista Bejo">
+                <div class="news-text">
+                    <h3>Bejo anuncia álbum para enero</h3>
+                    <p>En un reciente podcast, el artista canario sorprendió anunciando un nuevo disco en el que lleva meses trabajando.</p>
+                </div>
+            </article>
+
+            <article class="news-card-large">
+                <img src="img/Cruz_cafune_1.webp" alt="artista Cruz Cafune">
+                <div class="news-text">
+                    <h3>Cruz Cafune aplaza su concierto</h3>
+                    <p>El artista ha pospuesto su actuación en A Coruña alegando motivos personales sin más detalles.</p>
+                </div>
+            </article>            
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 SporyHigh. Todos los derechos reservados.</p>
+        <nav class="footer-nav">
+            <a href="index.html">Volver al inicio</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </footer>
+
+    <script>
+    document.querySelector(".nav-toggle").addEventListener("click", () => {
+    document.querySelector(".main-nav").classList.toggle("nav-open");
+    document.querySelector(".nav-toggle").classList.toggle("open");
+    });
+    </script>
+
+
+</body>
+</html>

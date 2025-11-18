@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SporyHigh - Plataforma musical</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- CABECERA -->
+    <header class="site-header">
+        <div class="header-inner">
+
+            <a href="index.html" class="logo" aria-label="Volver al inicio">
+                <span class="logo-main">SPORY</span><span class="logo-highlight">HIGH</span>
+            </a>
+
+            <!-- BOTÓN HAMBURGUESA -->
+            <button class="nav-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="playlists.html">Playlists</a></li>
+                    <li><a href="artistas.html">Artistas</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="inicio" class="page">
+
+        <!-- HERO PRINCIPAL -->
+        <section class="hero">
+            <div class="hero-card">
+                <div class="hero-text">
+                    <h1>Descubre tu playlist perfecta</h1>
+                    <p>
+                        Playlists personalizadas, artistas en tendencia y noticias de la escena musical actual,
+                        todo en un solo lugar.
+                    </p>
+                    <button class="btn btn-primary" onclick="location.href='playlists.html'">Comenzar</button>
+                </div>
+
+                <figure class="hero-media">
+                    <img src="img/persona-auriculares.png" alt="Persona escuchando música con auriculares">
+                    <figcaption>Encuentra la música que encaja contigo.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DESTACADOS -->
+        <section class="section-featured">
+            <header class="section-header">
+                <h2>Destacados</h2>
+                <p>Música y contenido seleccionado especialmente para ti.</p>
+            </header>
+
+            <div class="featured-grid">
+
+                <article class="featured-card">
+                    <h3>Playlist destacada</h3>
+                    <div class="featured-content">
+                        <img src="img/relajante.png" alt="Playlist Chill & Relax">
+                        <p>Descubre una mezcla perfecta para estudiar, relajarte o desconectar del mundo.</p>
+                    </div>
+                </article>
+
+                <article class="featured-card">
+                    <h3>Artista de la semana</h3>
+                    <div class="featured-content">
+                        <img src="img/melendi.png" alt="Retrato del artista destacado">
+                        <p>El artista más escuchado por nuestra comunidad esta semana.</p>
+                    </div>
+                </article>
+
+                <article class="featured-card">
+                    <h3>Noticias recientes</h3>
+                    <div class="featured-content">
+                        <img src="img/bejo.webp" alt="Imagen de noticia destacada">
+                        <p>Mantente al día con las últimas novedades del mundo musical.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONTACTO -->
+        <section id="contacto" class="section section-contact">
+            <header class="section-header">
+                <h2>Contacto</h2>
+                <p>¿Tienes sugerencias, dudas o reclamos? Accede al formulario en la sección de contacto.</p>
+            </header>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="site-footer">
+        <p>&copy; 2025 SporyHigh. Todos los derechos reservados.</p>
+        <nav class="footer-nav" aria-label="Navegación del pie de página">
+            <a href="#inicio">Volver al inicio</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="#legal" aria-disabled="true">Aviso legal</a>
+        </nav>
+    </footer>
+
+    <script>
+        document.querySelector(".nav-toggle").addEventListener("click", () => {
+            document.querySelector(".main-nav").classList.toggle("nav-open");
+            document.querySelector(".nav-toggle").classList.toggle("open");
+        });
+    </script>
+
+</body>
+</html>

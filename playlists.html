@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlists – SporyHigh</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+
+<header class="site-header">
+    <div class="header-inner">
+
+        <a href="index.html" class="logo" aria-label="Volver al inicio">
+            <span class="logo-main">SPORY</span><span class="logo-highlight">HIGH</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="playlists.html" class="active">Playlists</a></li>
+                <li><a href="artistas.html">Artistas</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<main class="page">
+    
+    <header class="section-header">
+        <h2>Playlists</h2>
+        <p>Explora nuestras playlists organizadas por estilos.</p>
+    </header>
+
+    <!-- Categorias -->
+    <section class="playlist-categories">
+        <button class="cat-btn active">Todas</button>
+        <button class="cat-btn">Electrónica</button>
+        <button class="cat-btn">Chill</button>
+        <button class="cat-btn">Pop</button>
+        <button class="cat-btn">Años 2010</button>
+        <button class="cat-btn">Éxitos</button>
+    </section>
+
+    <!-- Grid -->
+    <section class="playlist-full-grid">
+
+        <div class="playlist-card-large">
+            <img src="img/techno.png" alt="Techno Vibes">
+            <div>
+                <h3>Techno Vibes</h3>
+                <p>Sonidos electrónicos intensos para mantener la energía a tope.</p>
+                <button class="btn btn-secondary">Escuchar</button>
+            </div>
+        </div>
+
+        <div class="playlist-card-large">
+            <img src="img/relajante.png" alt="Chill & Relax">
+            <div>
+                <h3>Chill & Relax</h3>
+                <p>Ambiente perfecto para estudiar, trabajar o desconectar.</p>
+                <button class="btn btn-secondary">Escuchar</button>
+            </div>
+        </div>
+
+        <div class="playlist-card-large">
+            <img src="img/2010vibes.png" alt="2010 Vibes">
+            <div>
+                <h3>2010 Vibes</h3>
+                <p>Los mejores hits que marcaron la década del 2010.</p>
+                <button class="btn btn-secondary">Escuchar</button>
+            </div>
+        </div>
+
+        <div class="playlist-card-large">
+            <img src="img/hits.png" alt="Top Hits">
+            <div>
+                <h3>Top Hits</h3>
+                <p>Las canciones más escuchadas del momento.</p>
+                <button class="btn btn-secondary">Escuchar</button>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+    <p>&copy; 2025 SporyHigh. Todos los derechos reservados.</p>
+    <nav class="footer-nav">
+        <a href="index.html">Volver al inicio</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</footer>
+
+<script>
+document.querySelector(".nav-toggle").addEventListener("click", () => {
+    document.querySelector(".main-nav").classList.toggle("nav-open");
+    document.querySelector(".nav-toggle").classList.toggle("open");
+});
+</script>
+
+</body>
+</html>

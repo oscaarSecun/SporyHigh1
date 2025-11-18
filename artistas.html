@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistas – SporyHigh</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- cabecera -->
+    <header class="site-header">
+    <div class="header-inner">
+
+        <a href="index.html" class="logo" aria-label="Volver al inicio">
+            <span class="logo-main">SPORY</span><span class="logo-highlight">HIGH</span>
+        </a>
+
+        <!--menu hamburguesa -->
+        <button class="nav-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="playlists.html">Playlists</a></li>
+                <li><a href="artistas.html">Artistas</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+    
+    <main class="page">
+        
+        <header class="section-header">
+            <h2>Artistas</h2>
+            <p>Descubre a los artistas que están marcando tendencia.</p>
+        </header>
+
+        <!-- grid artistas -->
+        <section class="artists-full-grid">
+
+            <article class="artist-card-large">
+                <img src="img/camaron.png" alt="Camaron de La Isla">
+                <h3>Camarón de La Isla</h3>
+                <p>Icono del flamenco y una de las voces más influyentes de España.</p>
+            </article>
+
+            <article class="artist-card-large">
+                <img src="img/chunguitos.png" alt="Los Chunguitos">
+                <h3>Los Chunguitos</h3>
+                <p>Dúo legendario del flamenco pop urbano.</p>
+            </article>
+
+            <article class="artist-card-large">
+                <img src="img/juanmagan.png" alt="Juan Magan">
+                <h3>Urban Flow</h3>
+                <p>Sonidos urbanos mezclados con electrónica moderna.</p>
+            </article>
+
+            <article class="artist-card-large">
+                <img src="img/melendi.png" alt="Melendi">
+                <h3>Melendi</h3>
+                <p>Uno de los cantautores más influyentes del panorama español.</p>
+            </article>            
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 SporyHigh. Todos los derechos reservados.</p>
+        <nav class="footer-nav">
+            <a href="index.html">Volver al inicio</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </footer>
+
+    <script>
+    document.querySelector(".nav-toggle").addEventListener("click", () => {
+    document.querySelector(".main-nav").classList.toggle("nav-open");
+    document.querySelector(".nav-toggle").classList.toggle("open");
+    });
+    </script>
+
+</body>
+</html>

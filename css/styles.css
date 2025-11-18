@@ -1,0 +1,440 @@
+/*
+   VARIABLES Y RESETEO
+  */
+
+:root {
+    --color-verde: #70F97A;
+    --color-negro: #000000;
+    --color-blanco: #ffffff;
+    --color-gris: #d9d9d9;
+
+    --max-width: 1100px;
+    --radio-borde: 1rem;
+    --sombra-suave: 0 12px 35px rgba(0, 0, 0, 0.15);
+    --transicion: 0.25s ease;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Istok Web", sans-serif;
+    background: #f3f3f3;
+    color: var(--color-negro);
+    line-height: 1.45;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*
+   CABECERA
+  */
+
+.site-header {
+    background: var(--color-verde);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    position: relative;
+    z-index: 100;
+}
+
+.header-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 0.06em;
+}
+
+.logo-main { color: var(--color-negro); }
+.logo-highlight { color: var(--color-blanco); }
+
+/* NAV escritorio */
+
+.main-nav {
+    display: flex;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding-bottom: 0.15rem;
+    border-bottom: 2px solid transparent;
+    transition: var(--transicion);
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    border-bottom-color: var(--color-negro);
+}
+
+/*
+   CONTENEDOR PRINCIPAL
+  */
+
+.page {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+}
+
+/*
+   BOTONES
+  */
+
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 999px;
+    padding: 0.7rem 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.btn-primary,
+.btn-secondary {
+    background: var(--color-verde);
+    color: var(--color-negro);
+    box-shadow: var(--sombra-suave);
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+/*
+   HERO (INDEX)
+  */
+
+.hero {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-card {
+    background: var(--color-negro);
+    color: var(--color-blanco);
+    border-radius: 1rem;
+    padding: 1.8rem 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--sombra-suave);
+    max-width: 950px;
+}
+
+.hero-media figcaption {
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+
+/* 
+   SECCIÓN DESTACADOS (INDEX)
+  */
+
+.section-featured {
+    margin-top: 3rem;
+}
+
+.featured-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.featured-card {
+    background: var(--color-blanco);
+    border-radius: var(--radio-borde);
+    padding: 1.5rem;
+    box-shadow: var(--sombra-suave);
+}
+
+.featured-content {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.featured-content img {
+    width: 90px;
+    height: 90px;
+    border-radius: 0.7rem;
+}
+
+/* 
+   FORMULARIO CONTACTO
+   */
+
+.contact-card {
+    background: var(--color-blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--sombra-suave);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem;
+    border-radius: 0.6rem;
+    border: 2px solid #ddd;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--color-verde);
+    outline: none;
+}
+
+/* 
+   PLAYLISTS
+   */
+
+.playlist-categories {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.8rem;
+}
+
+.cat-btn {
+    background: var(--color-gris);
+    padding: 0.6rem 1rem;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cat-btn.active {
+    background: var(--color-verde);
+}
+
+.playlist-full-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.playlist-card-large {
+    background: var(--color-blanco);
+    padding: 1rem;
+    border-radius: var(--radio-borde);
+    display: flex;
+    gap: 1rem;
+    box-shadow: var(--sombra-suave);
+}
+
+.playlist-card-large img {
+    width: 150px;
+    height: 150px;
+    border-radius: 0.8rem;
+}
+
+/* 
+   ARTISTAS
+   */
+
+.artists-full-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;      
+}
+
+.artist-card-large {
+    background: var(--color-blanco);
+    border-radius: var(--radio-borde);
+    padding: 1.8rem 1.5rem 2rem;
+    text-align: center;
+    box-shadow: var(--sombra-suave);
+
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.artist-card-large img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 0.8rem;
+}
+
+.artist-card-large h3 {
+    margin: 0.4rem 0 0.6rem;
+}
+
+.artist-card-large p {
+    margin: 0;
+}
+
+/* 
+   NOTICIAS
+   */
+
+.news-full-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.news-card-large {
+    display: flex;
+    background: var(--color-blanco);
+    border-radius: var(--radio-borde);
+    padding: 1rem;
+    gap: 1.2rem;
+    box-shadow: var(--sombra-suave);
+}
+
+.news-card-large img {
+    width: 180px;
+    height: 120px;
+    border-radius: 0.7rem;
+}
+
+/* 
+   FOOTER
+   */
+
+.site-footer {
+    padding: 1.5rem;
+    text-align: center;
+    background: var(--color-blanco);
+    border-top: 1px solid #ddd;
+    margin-top: 2.5rem;
+}
+
+/* 
+   MENÚ HAMBURGUESA
+   */
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    width: 35px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    height: 4px;
+    background: var(--color-negro);
+    border-radius: 3px;
+}
+
+/* 
+   RESPONSIVE
+    */
+
+@media (max-width: 900px) {
+    .hero-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 820px) {
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 100%;
+        background: var(--color-verde);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        z-index: 98;
+    }
+
+    .main-nav.nav-open {
+        max-height: 400px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        text-align: left;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+    .main-nav ul li a {
+        display: block;
+        padding-left: 1.2rem; 
+    }
+    
+    .artists-full-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .artist-card-large {
+        width: 90%;
+    }
+}
+
+@media (max-width: 750px) {
+    .news-card-large {
+        flex-direction: column;
+    }
+    .news-card-large img {
+        width: 100%;
+        height: auto;
+    }
+}
